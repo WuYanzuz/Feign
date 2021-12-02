@@ -1,0 +1,24 @@
+server:
+  port: 9000
+
+rest:
+ url: http://localhost:8000/goods/getGoods/id=1
+
+spring:
+  application:
+    name: EUREKA-CONSUMER
+
+eureka:
+  instance:
+    hostname: localhost #主机名
+  client:
+    server-url:
+      dafaultzone: http://localhost:8671/eureka #eureka服务端的地址
+
+ribbon:
+  ConnectTimeout: 1000 #连接超时时间，默认1秒
+  ReadTimeout: 3000 #逻辑处理的超时时间，默认1秒
+
+logging:
+  level:
+   edu.jxut: debug

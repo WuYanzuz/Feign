@@ -1,0 +1,15 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: EUREKA-PROVIDER
+
+eureka:
+  instance:
+    hostname: localhost #主机名
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 9
+  client:
+    server-url:
+      dafaultzone: http://localhost:8671/eureka #eureka服务端的地址
